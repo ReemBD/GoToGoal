@@ -1,15 +1,26 @@
-# Introduction
-This is a demo goal setting up, using React Native and OpenAI API for generating the desired goal's steps.
+# Go To Goal
 
-## Getting Started
+This is a demo goal-setting app built with **React Native** and powered by the **OpenAI API** to generate actionable steps for user-defined goals.
 
-### Client
-After cloning the project locally to your computer, open the project and from the client directory:
-npm install to install dependencies
-npm start to start the client.
+## Client
 
-### Server
-From the server directory:
-npm install to install dependencies.
-Create a .env file and copy OPENAI_API_KEY=<YOUR_API_KEY>
-npm run dev to start the server.
+### Setup
+
+```bash
+cd client
+npm install
+npm start
+```
+
+## Server
+
+To setup the OpenAI API Key please create a `.env` file and copy the following with your API Key:
+`OPENAI_API_KEY=<YOUR_API_KEY>`
+
+Then follow these steps:
+
+```bash
+cd server
+npm install
+npm run dev
+```
