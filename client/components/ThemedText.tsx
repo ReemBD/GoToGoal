@@ -1,11 +1,17 @@
-import { Text } from "@react-navigation/elements"
-import { TextProps } from "react-native"
+import { useThemeColor } from "@/hooks/useThemeColor";
+import { Text } from "@react-navigation/elements";
+import { TextProps } from "react-native";
 
 const ThemedText = ({ children, style, ...rest }: TextProps) => {
-    return <Text style={[
-        { color: '#fff' },
-        style
-    ]}>
+
+    const color = useThemeColor({}, 'text');
+
+    return <Text
+        style={[
+            { color },
+            style
+        ]}
+        {...rest}>
         {children}
     </Text>
 }

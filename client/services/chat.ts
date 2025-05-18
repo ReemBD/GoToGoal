@@ -1,7 +1,8 @@
 // services/chat.ts
 import axios from 'axios';
+import { Platform } from 'react-native';
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = `http://${Platform.OS === 'web' ? 'localhost' : process.env.HOST_IP}:3000/api`;
 
 export const askChatGPT = async (goal: string) => {
     try {
